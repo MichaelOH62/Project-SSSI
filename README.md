@@ -10,4 +10,4 @@ To install NNI, we used the instructions given to build the UI from this website
 
 After running the notebook, the URL provided is https://24ba-35-194-75-195.ngrok.io/oview. A screenshot of the UI is below.
 
-![Milestone 1 AsMpo](https://user-images.githubusercontent.com/99360967/198709664-8ae4ad71-13d3-4c75-affb-65d24d0b1331.png)
+![NNIUI ASMPO](https://user-images.githubusercontent.com/99360967/198711703-d7948163-2653-4c33-98cc-4e939819b38d.png)
