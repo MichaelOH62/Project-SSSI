@@ -4,4 +4,4 @@ Project Members: Michael O'Hanlon & Adira Samaroo
 
 For this project we will be using the repository under Adira S.'s GitHub account. We are using Google Colab for the environment of the project.
 
-Installation instructions followed for NNI UI in loacted in milestone-1/README.md
+Here are the results of the baseline performance using the edited code of 228_semantic_segmentation_of_aerial_imagery_using_unet. 
