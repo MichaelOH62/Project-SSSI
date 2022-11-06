@@ -69,4 +69,5 @@ The training and validation loss curves are close in precision until the fifth e
 For the precision and recall values, these numbers were generated using the precision_score and recall_score functions from the sklearn.metrics library. Both values come out to be the same for both the 100 epoch and 50 epoch run. A run was made after changing the average values to measure the precision and recall from micro to weighted and the scores reflected the results shown in the images more accurately. For precision and recall, both values dropped by ~0.1 for each value and both values were unique.
 
 ![P-R_Curve_weighted](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_Curve_weighted.png?raw=true)
+
 ![P-R_values_and_Classification_Table_weighted](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_values_and_Classification_Table_weighted.png?raw=true)
