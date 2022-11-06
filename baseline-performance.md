@@ -25,6 +25,7 @@ At the final layer a 1x1 convolution is used to map each 64- component feature v
 
 <h2>Sources:</h2>
 [1. Introduction. Paragraph 5]] [3. Network Architecture. Paragraph 2] U-Net: Convolutional Networks for Biomedical Image Segmentation. https://arxiv.org/pdf/1505.04597.pdf
+
 [2. Overview. Paragraph 1] UNet — Line by Line Explanation. https://towardsdatascience.com/unet-line-by-line-explanation-9b191c76baf5
 
 <h1>Baseline Performance:</h1>
