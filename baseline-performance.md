@@ -4,7 +4,9 @@ Project Members: Michael O'Hanlon & Adira Samaroo
 
 For this project we will be using the repository under Adira S.'s GitHub account. We are using Google Colab for the environment of the project.
 
-Here is an explaination fo UNet and the results of the baseline performance using the edited code from 228_semantic_segmentation_of_aerial_imagery_using_unet.
+Here is an explanation fo UNet and the results of the baseline performance using the edited code from 228_semantic_segmentation_of_aerial_imagery_using_unet.
+
+<h1>U-Net:</h1>
 
 UNet is a special architecture for image segmentation that resembles the shape of the letter 'U'. This is the result of the expansive path of the architecture sharing similarities to the contracting path. The network only uses the valid part of each convolution, in this case the pixels of each segmented part of the image, for which the full context is available in the input image. This allows for arbitrary large images to be seamlessly segmented through an overlap-tile strategy. 
 
@@ -21,41 +23,42 @@ The expansive path is where the network learns to confine the object using conte
 
 At the final layer a 1x1 convolution is used to map each 64- component feature vector to the desired number of classes. In total the network has 23 convolutional layers. To allow a seamless tiling of the output segmentation map, it is important to select the input tile size such that all 2x2 max-pooling operations are applied to a layer with an even x- and y-size. [3.]
 
-Sources:
+<h2>Sources:</h2>
 [1. Introduction. Paragraph 5]] [3. Network Architecture. Paragraph 2] U-Net: Convolutional Networks for Biomedical Image Segmentation. https://arxiv.org/pdf/1505.04597.pdf
 [2. Overview. Paragraph 1] UNet — Line by Line Explanation. https://towardsdatascience.com/unet-line-by-line-explanation-9b191c76baf5
 
 <h1>Baseline Performance:</h1>
 
-Segmented Images:
+<h2>Segmented Images:</h2>
 
-100 epochs
+<h3>100 epochs</h3>
 
 ![Segmented_Images_100_1](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_100_1.png?raw=true)
 ![Segmented_Images_100_2](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_100_2.png?raw=true)
 
-50 epochs
+<h3>50 epochs</h3>
 
 ![Segmented_Images_50_1](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_50_1.png?raw=true)
 ![Segmented_Images_50_2](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_50_2.png?raw=true)
 ![Segmented_Images_50_3](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_50_2.png?raw=true)
 
-Training and Validation Loss vs. Epochs:
+<h2>Training and Validation Loss vs. Epochs:</h2>
 
-100 epochs
+<h3>100 epochs</h3>
 
 ![Training_and_Validation_loss_100](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Training_and_Validation_loss_100.png?raw=true)
 
-50 epochs
+<h3>50 epochs</h3>
 
 ![Training_and_Validation_loss_50](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Training_and_Validation_loss_50.png?raw=true)
 
-Precision and Recall Values:
-100 epochs
+<h2>Precision and Recall Values:</h2>
+
+<h3>100 epochs</h3>
 
 ![P-R_Curve_100](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_Curve_100.png?raw=true)
 
-50 epochs
+<h3>50 epochs</h3>
 
 ![P-R_Curve_50](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_Curve_50.png?raw=true)
 
