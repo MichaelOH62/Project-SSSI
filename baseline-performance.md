@@ -8,12 +8,12 @@ Here is an explaination fo UNet and the results of the baseline performance usin
 
 UNet is a special architecture for image segmentation that resembles the shape of the letter 'U'. This is the result of the expansive path of the architecture sharing similarities to the contracting path. The network only uses the valid part of each convolution, in this case the pixels of each segmented part of the image, for which the full context is available in the input image. This allows for arbitrary large images to be seamlessly segmented through an overlap-tile strategy. 
 
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/U-Net_Archetecture_1.png?raw=true)
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/U-Net_Archetecture_2.png?raw=true)
+![U-Net_Archetecture_1](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/U-Net_Archetecture_1.png?raw=true)
+![U-Net_Archetecture_2](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/U-Net_Archetecture_2.png?raw=true)
 
 To predict the pixels in the border region of the image, the missing context is extrapolated by mirroring the input image. This tiling strategy is important to apply the network to large images, since otherwise the resolution would be limited by the GPU memory. [1.] The network consists of a contracting layer, the general convolutional process, and an expansive path, which is composed of transposed 2D convolutional layers. [2.]
 
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Convolutional_Neural_Network.png?raw=true)
+![Convolutional_Neural_Network](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Convolutional_Neural_Network.png?raw=true)
 
 The contracting path is the typical path of a convolutional network, that repeats the application of two 3x3 convolutions which extract the high level features of the input image. Each followed by a rectified linear unit and a 2x2 max pooling operation which returns the maximum value for the portion of the image with stride 3 for downsampling, or reducing the sample rate from the majority cases to make the dataset more manageable. Max pooling acts as a noise suppressant while reducing the dimensionality. The convolution layers and pooling layer both form the i-th layer of the convolutional network, which is then used as the input for the next convolutional network.
 
@@ -30,32 +30,32 @@ Baseline Performance:
 Segmented Images:
 100 epochs
 
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_100_1.png?raw=true)
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_100_2.png?raw=true)
+![Segmented_Images_100_1](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_100_1.png?raw=true)
+![Segmented_Images_100_2](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_100_2.png?raw=true)
 
 50 epochs
 
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_50_1.png?raw=true)
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_50_2.png?raw=true)
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_50_2.png?raw=true)
+![Segmented_Images_50_1](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_50_1.png?raw=true)
+![Segmented_Images_50_2](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_50_2.png?raw=true)
+![Segmented_Images_50_3](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_50_2.png?raw=true)
 
 Training and Validation Loss vs. Epochs:
 100 epochs
 
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Training_and_Validation_loss_100.png?raw=true)
+![Training_and_Validation_loss_100](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Training_and_Validation_loss_100.png?raw=true)
 
 50 epochs
 
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Training_and_Validation_loss_50.png?raw=true)
+![Training_and_Validation_loss_50](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Training_and_Validation_loss_50.png?raw=true)
 
 Precision and Recall Values:
 100 epochs
 
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_Curve_100.png?raw=true)
+![P-R_Curve_100](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_Curve_100.png?raw=true)
 
 50 epochs
 
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_Curve_50.png?raw=true)
+![P-R_Curve_50](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_Curve_50.png?raw=true)
 
 The ten segmented images from the validation set are results of the model’s predictions after training itself. Overall, the model seems to have difficulty with recognizing differences in colors/labels on the images. Certain images appear with great success, those being the 8th image from the 100 epoch run and the last image from the 50 epoch run. However, a majority of the predictions do not appear to have a high accuracy when predicting an image from the validation set.
 
@@ -63,5 +63,5 @@ The training and validation loss curves are close in precision until the fifth e
 
 For the precision and recall values, these numbers were generated using the precision_score and recall_score functions from the sklearn.metrics library. Both values come out to be the same for both the 100 epoch and 50 epoch run. A run was made after changing the average values to measure the precision and recall from micro to weighted and the scores reflected the results shown in the images more accurately. For precision and recall, both values dropped by ~0.1 for each value and both values were unique.
 
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_Curve_weighted.png?raw=true)
-![alt text](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_values_and_Classification_Table_weighted.png?raw=true)
+![P-R_Curve_weighted](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_Curve_weighted.png?raw=true)
+![P-R_values_and_Classification_Table_weighted](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/P-R_values_and_Classification_Table_weighted.png?raw=true)
