@@ -28,6 +28,7 @@ Sources:
 Baseline Performance:
 
 Segmented Images:
+
 100 epochs
 
 ![Segmented_Images_100_1](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_100_1.png?raw=true)
@@ -40,6 +41,7 @@ Segmented Images:
 ![Segmented_Images_50_3](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Segmented_Images_50_2.png?raw=true)
 
 Training and Validation Loss vs. Epochs:
+
 100 epochs
 
 ![Training_and_Validation_loss_100](https://github.com/adiraCode/Project-SSSI/blob/milestone-2/pictures/Training_and_Validation_loss_100.png?raw=true)
