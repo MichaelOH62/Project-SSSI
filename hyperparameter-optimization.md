@@ -62,6 +62,6 @@ These values were then applied to the model to see how the baseline performance 
 
 *picture*
 
-<h2>Precision and Revall Values:</h2>
+<h2>Precision and Recall Values:</h2>
 
 *picture*
