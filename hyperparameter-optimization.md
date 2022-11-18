@@ -22,12 +22,12 @@ However, in certain problems, it can be difficult to choose a covariance functio
 
 To implement the tuner, we defined our search space as follows:
 
-*picture*
+![search_space](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/search_space.png?raw=true)
 
 This code segment tells NNI that the hyperparameters to optimize are batch_size, epochs, and learning_rate. The possible values for the parameters are also given for NNI to choose from to determine which combination of 3 values yields the highest accuracy.
 We then configured the experiment to run as follows:
 
-*picture*
+![experiment_config](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/experiment_config.png?raw=true)
 
 This segment tells NNI exactly how the experiment should be run to fit our needs, including the specification of using GPTuner, as well as the number of trials to run.
 
