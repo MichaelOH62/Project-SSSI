@@ -14,7 +14,7 @@ There are many different algorithms that can be used to achieve hyperparameter o
 
 The optimization model constructs a posterior distribution of functions akin to the Gaussian Process. The functions are constructed with the intention of being the best representation of the function that is being optimized. The posterior distribution improves as the number of observations increases, and the tuner is able to choose which regions in the parameter space are worth searching with more accuracy.
 
-![Milestone3BayesianAcquisition](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/Milestone3BayesianAcquisition.png?raw=true)
+![Milestone3PosteriorAcquisition](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/Milestone3PosteriorAcquisition.png?raw=true)
 
 Gaussian Processes are non-linear models that allow data to be models with a family of functions. The GP Tuner minimizes or maximizes the amount of steps required to find a combination of parameters that are close to the optimal combination of hyperparameters. It is assumed that every data point is a normally distributed random variable and every data point is related to every other. Which means an entire dataset can be described by a multivariate normal distribution with a non-trivial covariance. Gaussian Processes are described by mean (the mean of the predictor variable for the data point) and kernell (the relationship between the data points that takes input from two data points and returns the covariance between them) functions.
 
