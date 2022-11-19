@@ -67,12 +67,14 @@ These values were then applied to the model to see how the baseline performance 
 
 <h2>Segmented Images:</h2>
 
-*picture*
+![segmented_images_hpo_1](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/segmented_images_hpo_1.png?raw=true)
+![segmented_images_hpo_2](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/segmented_images_hpo_2.png?raw=true)
+![segmented_images_hpo_3](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/segmented_images_hpo_3.png?raw=true)
 
 <h2>Training and validation loss vs. epochs:</h2>
 
-*picture*
+![loss_vs_epoch_graph_hpo](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/loss_vs_epoch_graph_hpo.png?raw=true)
 
 <h2>Precision and Recall Values:</h2>
 
-*picture*
+![precision_recall_hpo](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/precision_recall_hpo.png?raw=true)
