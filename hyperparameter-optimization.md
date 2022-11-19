@@ -46,7 +46,18 @@ https://towardsdatascience.com/shallow-understanding-on-bayesian-optimization-32
 
 <h1>Results Obtained:</h1>
 
+The experiment is run in NNI where the combination of hyperparameters that yields the highest validation accuracy are to be found. We initially ran the experiment with 50 trials however the Colab environment was disconnected after only 16 of the trials completed. The results of those 16 trials are shown here:
+
+![nni_results](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/nni_results.png?raw=true)
+![nni_disconnect](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/nni_disconnect.png?raw=true)
+
+We then ran the optimization again but this time used only 10 trials to ensure that the process would complete successfully. The results of those 10 trials are shown here:
+
+*picture*
+
 <h2>Hyperparameter Optimization Results:</h2>
+
+After running a total of 26 trials, the trial that achieved the highest value for validation accuracy is shown here:
 
 *picture*
 
