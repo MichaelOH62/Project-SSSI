@@ -77,4 +77,5 @@ These values were then applied to the model to see how the baseline performance 
 
 <h2>Precision and Recall Values:</h2>
 
+![precision_recall_values_hpo](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/precision_recall_values_hpo.png?raw=true)
 ![precision_recall_hpo](https://github.com/adiraCode/Project-SSSI/blob/milestone-3/pictures/precision_recall_hpo.png?raw=true)
