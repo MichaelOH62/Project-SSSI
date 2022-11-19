@@ -2,6 +2,8 @@
 Project for CS301 F22
 Project Members: Michael O'Hanlon & Adira Samaroo
 
+<h2>Milestone 1: Environment Setup</h2>
+
 For this project we will be using the repository under Adira S.'s GitHub account. We are using Google Colab for the environment of the project. 
 To install NNI, we used the instructions given to build the UI from this website https://nni.readthedocs.io/en/stable/sharings/nni_colab_support.html.
 
