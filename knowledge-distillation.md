@@ -14,6 +14,22 @@ We took the original model and used that as the teacher model, and we also creat
 
 We compiled the student model the same way that the teacher model is compiled, but to train it we used a Distiller instead of fitting the model to the data. The Distiller takes both the teacher model and student model as input and trains the student model to perform similarly to the teacher model. This is what allows the student model to be compressed in size and still achieve the same accuracy as the teacher model.
 
+<h2>Issues Encountered</h2>
+
+In the end, we encountered several issues with this milestone in trying to get a working student model. First, we struggled with figuring out how to actually compress the model yet have it perform the same as the model that was not compressed. We found a useful tutorial on through keras by Kenneth Borup that covers how to perform knowledge distillation. We figured out that we could reduce the size of the model by changing the first input to the Conv2D layers of the model. This would decrease the number of filters and thus reduce the number of parameters in the model, compressing it.
+
+We elected to create two models, one that was labeled as the “teacher”, and another that would be labeled as the “student” The teacher model was the same as the original model, just renamed. The student model was the same as the teacher model however we reduced the first input to the Conv2D layers by half.
+
+*picture of teacher model code*
+
+*picture of student model code*
+
+Now that we had the model compressed, we struggled with actually figuring out how to perform the knowledge. The same tutorial we referenced had an example of a Distiller class that could be used to perform the knowledge distillation. We utilized this and were able to perform the distillation after making some modifications to work with the semantic segmentation model.
+
+At this point we were able to perform the knowledge distillation, however the student model was not able to make accurate predictions. We tried adjusting some of the parameters in the compile() function used on the model, but struggled to make any noticeable improvements. The current model struggles largely with making predictions, although we do believe that the teacher model has an impact on its performance because the teacher model is not very accurate. This was our largest issue, and after troubleshooting the student model and distillation process we could not find a way to substantially improve the student model’s accuracy.
+
+*picture of distiller compile*
+
 <h2>Segmented Images:</h2>
 
 ![segmented_images_mc_1](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/segmented_images_mc_1.png?raw=true)
