@@ -20,15 +20,21 @@ In the end, we encountered several issues with this milestone in trying to get a
 
 We elected to create two models, one that was labeled as the “teacher”, and another that would be labeled as the “student” The teacher model was the same as the original model, just renamed. The student model was the same as the teacher model however we reduced the first input to the Conv2D layers by half.
 
-*picture of teacher model code*
+Teacher Model Layer Example:
 
-*picture of student model code*
+![teacher_model_layers](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/teacher_model_layers.png?raw=true)
+
+Student Model Layer Example:
+
+![student_model_layers](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/student_model_layers.png?raw=true)
 
 Now that we had the model compressed, we struggled with actually figuring out how to perform the knowledge. The same tutorial we referenced had an example of a Distiller class that could be used to perform the knowledge distillation. We utilized this and were able to perform the distillation after making some modifications to work with the semantic segmentation model.
 
-At this point we were able to perform the knowledge distillation, however the student model was not able to make accurate predictions. We tried adjusting some of the parameters in the compile() function used on the model, but struggled to make any noticeable improvements. The current model struggles largely with making predictions, although we do believe that the teacher model has an impact on its performance because the teacher model is not very accurate. This was our largest issue, and after troubleshooting the student model and distillation process we could not find a way to substantially improve the student model’s accuracy.
+At this point we were able to perform the knowledge distillation, however the student model was not able to make accurate predictions. We tried adjusting some of the arguments in the compile() function used on the model, but struggled to make any noticeable improvements. The current model struggles largely with making predictions, although we do believe that the teacher model has an impact on its performance because the teacher model is not very accurate. This was our largest issue, and after troubleshooting the student model and distillation process we could not find a way to substantially improve the student model’s accuracy.
 
-*picture of distiller compile*
+Compiling the Distiller, Adjusted the Alpha and Temperature Arguments
+
+![distiller_compile](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/distiller_compile.png?raw=true)
 
 <h2>Segmented Images:</h2>
 
