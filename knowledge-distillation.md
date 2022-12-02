@@ -8,15 +8,15 @@ For this project we will be using the repository under Adira S.'s GitHub account
 
 For the last part of the project, we performed model compression using Knowledge Distillation, where a compressed, or student, model is trained to imitate a pre-trained, larger model or teacher, then the student model is fine tuned using the knowledge distillation process. The idea is to train one large model to be as optimized as possible then take the knowledge from the large model and use it to train a model that is easier to run on any machine regardless of hardware capability. This is called “distillation”, where the small model is trained to process data and generalize outputs the same way a larger model can with less data processing.
 
-*picture of hello world example
+![mc_hello_world](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/mc_hello_world.png?raw=true)
 
 In a neural network, knowledge typically refers to the learned weights and biases the teacher gained from training to make its generalizations, but knowledge distillation normally uses the logits as the source of teacher knowledge. Other kinds of relevant knowledge include the relationship between different types of activations and neurons or the parameters of the teacher model themselves. To transfer the generalization abilities of the teacher model to the student, class probabilities are produced by the teacher model as “soft targets” for the student model to train on. Soft targets with high entropy provide more helpful information per training case than hard targets and less variance in the gradient between training cases. This allows the student to be trained using less data and a higher learning rate.
 
-*picture of function*
+![Distillation_Fn](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/Distillation_Fn.jpg?raw=true)
 
 Neural networks typically produce class probabilities by using a “softmax” output layer that converts the logit computed for each class into a probability by comparing the first logit with the other logits. The logits are softened using a temperature scaling function which smoothes out the probability distribution and inter-class relationships learned by the teacher.
 
-*picture from NNI MC website*
+![Knowledge_Distill_Model](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/Knowledge_Distill_Model.png?raw=true)
 
 Knowledge passes to the student by training the model on a  transfer set and and using a soft target for each case in the transfer set produced by the teacher model with a high temperature in its softmax. That same high temperature is used to train the student model, then the temperature is set to 1 once the model is trained. From there the student model make its own hard predictions using the set temperature. The student model should then make predictions similar to the teacher model using the hard data set used to train the teacher model. 
 
