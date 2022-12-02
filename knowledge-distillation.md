@@ -30,9 +30,9 @@ Student Model Layer Example:
 
 Now that we had the model compressed, we struggled with actually figuring out how to perform the knowledge. The same tutorial we referenced had an example of a Distiller class that could be used to perform the knowledge distillation. We utilized this and were able to perform the distillation after making some modifications to work with the semantic segmentation model.
 
-At this point we were able to perform the knowledge distillation, however the student model was not able to make accurate predictions. We tried adjusting some of the arguments in the compile() function used on the model, but struggled to make any noticeable improvements. The current model struggles largely with making predictions, although we do believe that the teacher model has an impact on its performance because the teacher model is not very accurate. This was our largest issue, and after troubleshooting the student model and distillation process we could not find a way to substantially improve the student model’s accuracy.
+At this point we were able to perform the knowledge distillation, however the student model was not able to make accurate predictions. We tried adjusting the alpha and temperature arguments in the compile() function used on the model, but struggled to make any noticeable improvements. The current model struggles largely with making predictions, although we do believe that the teacher model has an impact on its performance because the teacher model is not very accurate. This was our largest issue, and after troubleshooting the student model and distillation process we could not find a way to substantially improve the student model’s accuracy.
 
-Compiling the Distiller, Adjusted the Alpha and Temperature Arguments
+Compiling the Distiller:
 
 ![distiller_compile](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/distiller_compile.png?raw=true)
 
