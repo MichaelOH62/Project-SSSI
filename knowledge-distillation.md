@@ -16,14 +16,16 @@ We compiled the student model the same way that the teacher model is compiled, b
 
 <h2>Segmented Images:</h2>
 
-*segmented images pictures*
+![segmented_images_mc_1](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/segmented_images_mc_1.png?raw=true)
+![segmented_images_mc_2](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/segmented_images_mc_2.png?raw=true)
+![segmented_images_mc_3](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/segmented_images_mc_3.png?raw=true)
 
 <h2>Training and validation loss vs. epochs:</h2>
 
-*loss vs epochs graph*
+![loss_vs_epoch_graph_mc](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/loss_vs_epoch_graph_mc.png?raw=true)
 
 <h2>Precision and Recall Values:</h2>
 
-*precision recall values*
+![precision_recall_values_mc](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/precision_recall_values_mc.png?raw=true)
 
-*precision recall graph*
+![precision_recall_mc](https://github.com/adiraCode/Project-SSSI/blob/milestone-4/pictures/precision_recall_mc.png?raw=true)
