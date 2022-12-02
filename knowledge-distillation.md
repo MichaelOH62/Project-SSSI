@@ -20,7 +20,8 @@ Neural networks typically produce class probabilities by using a “softmax” o
 
 Knowledge passes to the student by training the model on a  transfer set and and using a soft target for each case in the transfer set produced by the teacher model with a high temperature in its softmax. That same high temperature is used to train the student model, then the temperature is set to 1 once the model is trained. From there the student model make its own hard predictions using the set temperature. The student model should then make predictions similar to the teacher model using the hard data set used to train the teacher model. 
 
-Sources:
+<h2>Sources:</h2>
+
 Distilling the Knowledge in a Neural Network. Geoffrey Hinton, Geoffrey Hinton, Jeff Dean. https://arxiv.org/pdf/1503.02531.pdf
 
 Knowledge Distillation. Kenneth Borup. https://keras.io/examples/vision/knowledge_distillation/
