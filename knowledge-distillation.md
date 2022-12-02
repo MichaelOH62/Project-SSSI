@@ -5,3 +5,5 @@ Project Members: Michael O'Hanlon & Adira Samaroo
 For this project we will be using the repository under Adira S.'s GitHub account. We are using Google Colab for the environment of the project.
 
 <h1>Model Compression:</h1>
+
+For the model compression in this milestone we utilized the concept of Knowledge Distillation.
